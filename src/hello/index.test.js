@@ -1,13 +1,13 @@
 import express from 'express';
 import request from 'supertest';
-import router from './index';
+import router from '../routes';
 
 const app = express();
 app.use('/', router);
 
 describe('hello', () => {
   it('GET', (done) => {
-    request(app).get('/').end((err, res) => {
+    request(app).get('/hello').end((err, res) => {
       const { statusCode, text } = res;
 
       expect(statusCode).toBe(200);
@@ -17,7 +17,7 @@ describe('hello', () => {
   });
 
   it('POST', (done) => {
-    request(app).post('/').end((err, res) => {
+    request(app).post('/hello').end((err, res) => {
       const { statusCode, text } = res;
 
       expect(statusCode).toBe(200);
