@@ -1,8 +1,7 @@
-import express from 'express';
 import request from 'supertest';
+import app from '../configuredApp';
 import router from '../routes';
 
-const app = express();
 app.use('/', router);
 
 describe('hello', () => {
