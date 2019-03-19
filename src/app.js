@@ -1,6 +1,10 @@
-import app from './configuredApp';
-import routes from './routes';
+import express from 'express';
+import configure from './config/express/middlewares';
+import router from './routes/router';
 
-app.use('/', routes);
+const app = configure(express());
+const port = process.env.PORT;
 
-export default app;
+app.use('/', router);
+
+export { app, port };

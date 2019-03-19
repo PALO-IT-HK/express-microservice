@@ -1,7 +1,9 @@
+import express from 'express';
 import request from 'supertest';
-import app from '../configuredApp';
-import router from '../routes';
+import configure from '../../config/express/middlewares';
+import router from '../router';
 
+const app = configure(express());
 app.use('/', router);
 
 describe('hello', () => {

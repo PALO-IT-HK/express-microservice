@@ -8,19 +8,19 @@ A reusable boilerplate for microservices built in NodeJS for Palowans to get fam
 
 ### Setup
 
-```
+```javascript
 npm install
 ```
 
-### Run
+### Run Development
 
-```
-npm start
+```javascript
+npm run dev
 ```
 
 ### Testing
 
-```
+```javascript
 // Run Tests
 npm test
 
